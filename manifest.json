@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "Philarmonie Ticket Downloader",
+  "description": "This extension allows to download all your Philarmonie tickets. ",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+   "content_scripts": [
+    {
+      "matches": ["https://citm-philharmoniedeparis.shop.secutix.com/account/*"],
+      "js": ["lib/jquery-1.11.3.min.js","urlextract.js"]
+    }
+   ],
+   "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+  "permissions": [
+    "background",
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}
