@@ -15,12 +15,7 @@
       "js": ["lib/jquery-1.11.3.min.js","urlextract.js"]
     }
    ],
-   "background": {
-      "scripts": ["background.js"],
-      "persistent": false
-    },
   "permissions": [
-    "background",
     "activeTab",
     "https://ajax.googleapis.com/"
   ]
